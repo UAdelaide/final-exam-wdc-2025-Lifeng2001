@@ -4,7 +4,9 @@ const session = require('express-session');
 require('dotenv').config();
 
 const app = express();
-app.use(session())
+app.use(session({
+    secret: ''
+}))
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
