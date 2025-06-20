@@ -216,7 +216,7 @@ function logout(){
     if (this.readyState ===4 ) {
         if (this.status ===200) {
             alert('logged out successfully');
-            window.location.href = '/login.index';
+            window.location.href = '/index.html';
         } else {
             alert('logout failed');
         }
