@@ -1,8 +1,12 @@
 const mysql = require('mysql/promise');
 
 let db;
-async function initDB(params) {
+async function initDB() {
+
+
+
     
+
 }() => {
     try {
         // Connect to MySQL without specifying a database
