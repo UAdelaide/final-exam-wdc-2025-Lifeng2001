@@ -59,7 +59,8 @@
         const error = ref('');
         async function loadalldogs() {
           try {
-            const res = await fetch ('')
+            const res = await fetch ('/api/dogs');
+            if(!res.ok)
           }
 
         }
