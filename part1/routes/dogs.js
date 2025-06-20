@@ -3,6 +3,7 @@ const router = express.Router();
 const { getDb } = require('../db');
 
 router.get('/api/dogs', async(req, res) => {
+    const db = getDb();
     const sql = `
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
         FROM Dogs d

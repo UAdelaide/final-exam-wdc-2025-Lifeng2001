@@ -3,6 +3,7 @@ const router = express.Router();
 const { getDb } = require('../db');
 
 router.get('/api/walkers/summary', async (req, res) => {
+    const db = getDb();
     const sql = `
         SELECT u.username AS walker_username,
         COUNT(r.rating) AS total_ratings,
