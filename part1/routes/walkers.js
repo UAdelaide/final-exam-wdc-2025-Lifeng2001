@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-router.get('/api/walkers/summary', async(req, res) => {
+router.get('/api/walkers/summary', async (req, res) => {
     // [
     //     {
     //       "walker_username": "bobwalker",
@@ -32,11 +32,11 @@ router.get('/api/walkers/summary', async(req, res) => {
     `;
 
     try {
-        const [results] = await db.query (sql);
+        const [results] = await db.query(sql);
         res.json(results);
     } catch (error) {
         console.error('Error fetching open walkers:', error);
-        res.status(500).json({ error: 'Failed to fetch walkers'});
+        res.status(500).json({ error: 'Failed to fetch walkers' });
     }
 });
 
