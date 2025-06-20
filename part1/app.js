@@ -26,9 +26,8 @@ app.use('/',dogsRouter);
 app.use('/',walkrequestsRouter);
 app.use('/',walkersRouter);
 
-const database = require('./db');
 
-(async()=> {
+(async () => {
     try {
         // Connect to MySQL without specifying a database
             const connection = await mysql.createConnection({
