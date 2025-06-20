@@ -5,7 +5,10 @@ require('dotenv').config();
 
 const app = express();
 app.use(session({
-    secret: ''
+    secret: '1234',
+    resave:false,
+    saveUninitialized: false,
+    cookie
 }))
 // Middleware
 app.use(express.json());
