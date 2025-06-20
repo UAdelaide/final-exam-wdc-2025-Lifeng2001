@@ -11,8 +11,9 @@ router.get('/', async(req, res) => {
 
     try {
         const [results] = await db.query (sql);
-        re
+        res.json(results);
     }
+    
 });
 
 module.exports = router;
