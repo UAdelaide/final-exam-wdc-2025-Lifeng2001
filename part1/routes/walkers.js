@@ -26,7 +26,8 @@ router.get('/api/walker/summary', async(req, res) => {
         FROM Walkers w
         LEFT JOIN Ratings r ON w.walker_id = r.walker_id
         LEFT JOIN Walks wk ON w.walker_id = wk.walker_id
-        GROUP BY w.walker
+        GROUP BY w.walker_id,w.username
+        ORDER BY w.username
     `;
 
     try {
