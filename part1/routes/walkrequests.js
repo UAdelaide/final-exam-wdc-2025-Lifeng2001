@@ -11,9 +11,7 @@ router.get('/api/dogs', async(req, res) => {
     // "location": "Parklands",
     // "owner_username": "alice123"
     const sql = `
-        SELECT w.name AS dog_name, d.size, u.username AS owner_username
-        FROM Dogs d
-        JOIN Users u ON d.owner_id = u.user_id
+        SELECT w.req
     `;
 
     try {
