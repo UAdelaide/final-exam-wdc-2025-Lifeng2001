@@ -9,7 +9,9 @@ router.get('/', async(req, res) => {
         JOIN Users u ON d.owner_id = u.user_id
     `;
 
-    try {}
+    try {
+        const [results] = await db
+    }
 });
 
 module.exports = router;
