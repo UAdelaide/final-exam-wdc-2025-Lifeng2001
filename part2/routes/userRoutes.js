@@ -35,72 +35,32 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// POST login (dummy version)
-// router.post('/login', async (req, res) => {
-//   const { username, password } = req.body;
-
-//   try {
-//     const [rows] = await db.query(`
-//       SELECT user_id, username, role FROM Users
-//       WHERE username = ? AND password_hash = ?
-//     `, [username, password]);
-
-//     if (rows.length === 0) {
-//       return res.status(401).json({ error: 'Invalid credentials' });
-//     }
-//     const user = rows[0];
-//     // session to store user infomation
-//       req.session.user = {
-//       id: user.user_id,
-//       username: user.username,
-//       role: user.role
-//     };
-
-//     res.json({ message: 'Login successful', user: req.session.user });
-//   } catch (error) {
-//     res.status(500).json({ error: 'Login failed' });
-//   }
-// });
-// POST login (dummy version)
+POST login (dummy version)
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
     const [rows] = await db.query(`
-      SELECT user_id, username , password_hash, role FROM Users
+      SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
     `, [username, password]);
 
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
-
-    // stundent add
-    // save user information into session
     const user = rows[0];
-
-    req.session.user = {
+    // session to store user infomation
+      req.session.user = {
       id: user.user_id,
       username: user.username,
       role: user.role
     };
 
-    res.json({
-      message:'login sucessful',
-      user: req.session.user
-    });
-  }catch (error) {
-    res.status(500).json({error:'login failed'});
+    res.json({ message: 'Login successful', user: req.session.user });
+  } catch (error) {
+    res.status(500).json({ error: 'Login failed' });
   }
 });
-router.post('/logout', (req, res) => {
-  req.session.destroy(err => {
-    if (err) {
-      return res.status(500).json({ message: 'Logout failed' });
-    }
-    res.clearCookie('connect.sid');
-    res.json({ message: 'Logged out successfully' });
-  });
-});
+
 
 module.exports = router;
