@@ -213,7 +213,7 @@ function logout(){
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
-    x
+    xmlhttp.onreadystatechange = function
     if (this.readyState ===4 ) {
         if (this.status ===200) {
             alert('logged out successfully');
