@@ -88,11 +88,9 @@
           try {
             const res = await fetch(`/api/users/me`);
 
-            const currentUser.value = await res.json();
-            if (!res.ok) throw new Error(result.error || 'fetch current user failed');
-            message.value = result.message;
-            error.value = '';
-            return result.user.id;
+            currentUser.value = await res.json();
+
+            
           } catch (err) {
             error.value = err.message;
             message.value = '';
