@@ -88,7 +88,7 @@
           try {
             const res = await fetch(`/api/users/me`);
 
-            const result = await res.json();
+            const  = await res.json();
             if (!res.ok) throw new Error(result.error || 'fetch current user failed');
             message.value = result.message;
             error.value = '';
