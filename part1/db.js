@@ -26,6 +26,7 @@ let db;
     database: 'DogWalkService',
     multipleStatements:true
     });
+    const 
 
     // Create a table if it doesn't exist
     await db.execute(`
