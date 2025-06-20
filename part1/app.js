@@ -36,8 +36,8 @@ app.use('/',walkersRouter);
               password: '' // Set your MySQL root password
             });
             await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
-            await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
-            USE DogWalkService;
+            await connection.query('USE DogWalkService');
+            ;
             await connection.end();
             db = await mysql.createConnection({
                   host: 'localhost',
