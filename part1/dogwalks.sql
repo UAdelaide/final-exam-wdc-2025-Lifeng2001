@@ -12,7 +12,7 @@ CREATE TABLE Users (
 INSERT INTO Users (username, emial, password_hash, role)
 VALUES (
     ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-    ('bobwalker, email bob@example.com, password hash hashed456, and role walke
+    ('bobwalker','bob@example.com, password hash hashed456, and role walke
 
 )
 
