@@ -20,14 +20,14 @@ router.get('/api/dogs', async(req, res) => {
         From WalkRequests w
         JOIN Dogs d ON w.dog_id = d.dog_id
         JOIN Users u ON d.owner_id = u.user_id
-        WHERE w.
+        WHERE w.status = 'open'
     `;
 
     try {
         const [results] = await db.query (sql);
         res.json(results);
     } catch (error) {
-        console.error('Error fetching dogs:', error);
+        console.error('Error fetching open:', error);
         res.status(500).json({ error: 'Failed to fetch dogs'});
     }
 });
