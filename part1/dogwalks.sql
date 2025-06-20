@@ -16,7 +16,6 @@ VALUES (
     ('carol123', 'carol@example.com', 'hashed789', 'owner'),
     ('joes123','joes@example.com', 'hashed111','walker'),
     ('momo123','momo@example.com', 'hashed222','owner');
-
 )
 
 
@@ -29,6 +28,8 @@ CREATE TABLE Dogs (
     size ENUM('small', 'medium', 'large') NOT NULL,
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
+
+
 
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
