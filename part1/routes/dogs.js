@@ -9,13 +9,7 @@ router.get('/', async(req, res) => {
         JOIN Users u ON d.owner_id = u.user_id
     `;
 
-    db.query(sql, (err, results) => {
-        if (err) {
-            console.error('Error fetching dogs:', err);
-            return res.status(500).json({ error: 'Failed to fetch dogs' });
-        }
-        res.json(results);
-    });
+    try {}
 });
 
 module.exports = router;
