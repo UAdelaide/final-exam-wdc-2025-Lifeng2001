@@ -28,7 +28,7 @@ async function initDB() {
     role ENUM('owner', 'walker') NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
-
+            )
 await db.execute(
 
 
