@@ -57,7 +57,9 @@
 
         async function applyToWalk(requestId) {
           try {
-            // use getCurrentUser() 
+            // use getCurrentUser()
+            const userId = await getCurrentUser();
+            if()
 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
