@@ -26,7 +26,7 @@ async function initDatabase() {
     database: 'DogWalkService',
     multipleStatements:true
     });
-    const schemaSql = require('fs').readFileSync('./dogwalks.sql','');
+    const schemaSql = require('fs').readFileSync('./dogwalks.sql','utf8');
     console.log('Database initialized successfully');
 } catch (err) {
     console.error('Database initialization failed:', err);
