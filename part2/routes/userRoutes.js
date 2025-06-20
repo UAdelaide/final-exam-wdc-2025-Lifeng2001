@@ -50,11 +50,15 @@ router.post('/login', async (req, res) => {
     }
     const user = rows[0];
     // session to store user infomation
-      req.session.user = {
+    console.log('Before login session:', req.session);
+
+    req.session.user = {
       id: user.user_id,
       username: user.username,
       role: user.role
     };
+
+    console.log('After login session:', req.session);
 
     res.json({ message: 'Login successful', user: req.session.user });
   } catch (error) {
