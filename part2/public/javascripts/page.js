@@ -215,7 +215,8 @@ function logout(){
     var xmlhttp = new XMLHttpRequest();
     if (this.readyState ===4 ) {
         if (this.status ===200) {
-            alert('log')
+            alert('logged out successfully');
+            window.lo
         }
     }
     // Open connection to server & send the post data using a POST request
