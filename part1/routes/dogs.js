@@ -12,5 +12,5 @@ router.get('/api/dogs',(req, res)=>) {
             }
             res.json(results);
         }
-    
+
 }
