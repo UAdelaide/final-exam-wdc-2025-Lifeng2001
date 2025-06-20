@@ -64,7 +64,7 @@
           try {
             // use getCurrentUser()
             const userId = await getCurrentUser();
-            console.
+            console.log('',userId);
             if(!userId) throw new error("User not logged in")
 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
