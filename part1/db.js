@@ -24,7 +24,7 @@ async function initDatabase() {
     // user: 'root',
     // password: ''
     database: 'DogWalkService',
-    multipleStatements:true
+    multipleStatements: true
     });
     const schemaSql = require('fs').readFileSync('./dogwalks.sql','utf8');
     await db.query(schemaSql);
