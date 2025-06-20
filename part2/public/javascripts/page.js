@@ -190,7 +190,7 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
 
             alert("Welcome "+this.response.user.username);
-            if(re)
+            if(this.response.user.role ==='owner')
             window.location.href = '/owner-dashboard.html';
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
