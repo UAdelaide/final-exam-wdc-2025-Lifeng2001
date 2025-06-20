@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-router.get('/api/walker/summary', async(req, res) => {
+router.get('/api/walkers/summary', async(req, res) => {
     // [
     //     {
     //       "walker_username": "bobwalker",
