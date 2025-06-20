@@ -32,6 +32,10 @@ CREATE TABLE Dogs (
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
 ((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
 
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
