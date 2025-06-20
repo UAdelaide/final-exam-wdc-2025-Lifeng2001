@@ -10,7 +10,8 @@ router.get('/', async(req, res) => {
     `;
 
     try {
-        const [results] = await db
+        const [results] = await db.query (sql);
+        re
     }
 });
 
