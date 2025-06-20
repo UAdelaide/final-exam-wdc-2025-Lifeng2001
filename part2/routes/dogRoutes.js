@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../models/db');
 router.get('/my-dogs', async (req, res) => {
 
-     const ownerId = req.session.user_id;
+     const ownerId = req.session.user && req.session.user.id;
      if(!ownerId) {
          return res.status(401).json({error: 'Not logged in'});
      }
