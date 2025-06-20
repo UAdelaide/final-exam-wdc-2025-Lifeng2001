@@ -29,7 +29,7 @@ let db;
     const schemaSql = require('fs').readFileSync('./dogwalks.sql');
     console.log('Database initialized successfully');
 } caches (err) {
-    console.error('D')
+    console.error('Database initialize')
 }
 
     // Create a table if it doesn't exist
