@@ -26,7 +26,7 @@ app.use('/',dogsRouter);
 app.use('/',walkrequestsRouter);
 app.use('/',walkersRouter);
 
-const database = re
+const database = require('./db')
 
 (async()=> {
     try {
