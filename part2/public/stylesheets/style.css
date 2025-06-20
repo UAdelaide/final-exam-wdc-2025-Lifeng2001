@@ -159,6 +159,6 @@ section {
     margin: 0 auto;
 }
 input:not(:placeholder-shown) {
-    
+    background-color: aliceblue;
 
 }
