@@ -48,6 +48,7 @@ CREATE TABLE WalkRequests (
     FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id)
 );
 INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location, status)
+VALUES
 
 CREATE TABLE WalkApplications (
     application_id INT AUTO_INCREMENT PRIMARY KEY,
