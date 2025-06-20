@@ -47,7 +47,7 @@ CREATE TABLE WalkRequests (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id)
 );
-INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location)
+INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location, st)
 
 CREATE TABLE WalkApplications (
     application_id INT AUTO_INCREMENT PRIMARY KEY,
