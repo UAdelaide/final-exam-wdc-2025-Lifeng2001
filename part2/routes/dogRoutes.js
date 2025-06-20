@@ -3,10 +3,10 @@ const router = express.Router();
 const db = require('../models/db');
 router.get('/my-dogs', async (req, res) => {
 
-    // const ownerId = req.session.user_id;
-    // if(!ownerId) {
-    //     return res.status(401).json({error: 'Not logged in'});
-    // }
+     const ownerId = req.session.user_id;
+     if(!ownerId) {
+         return res.status(401).json({error: 'Not logged in'});
+     }
 
     try {
       const [rows] = await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?',[ownerId]);
