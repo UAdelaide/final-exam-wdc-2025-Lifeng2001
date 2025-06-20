@@ -19,7 +19,7 @@ router.get('/api/walker/summary', async(req, res) => {
     //   ]
 
     const sql = `
-        SELECT w.walker_username,
+        SELECT w.walker_username AS walker_user,
         d.name AS dog_name,
         w.requested_time,
         w.duration_minutes,
