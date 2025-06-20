@@ -15,7 +15,9 @@ router.get('/api/dogs', async(req, res) => {
         d.name AS dog_name,
         w.requested_time,
         w.duration_minutes,
-        w.location
+        w.location,
+        u.username AS owner_username
+        F
     `;
 
     try {
