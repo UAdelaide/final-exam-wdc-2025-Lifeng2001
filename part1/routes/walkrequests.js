@@ -3,7 +3,7 @@ const router = express.Router();
 const { getDb } = require('../db');
 
 router.get('/api/walkrequests/open', async(req, res) => {
-    const 
+    const db = getDb();
     const sql = `
         SELECT w.request_id,
         d.name AS dog_name,
