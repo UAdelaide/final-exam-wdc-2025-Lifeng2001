@@ -36,4 +36,4 @@ async function initDatabase() {
 
 
 
-module.exports = {initDatabase,db: ()=> db};
+module.exports = {initDatabase,db: () => db};
