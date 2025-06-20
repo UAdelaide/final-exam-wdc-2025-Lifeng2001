@@ -5,7 +5,7 @@
     justify-content: space-between;
 }
 #logoutBtn {
-    
+    height: 30;
     border: 1px solid red;
     border-radius: 8px;
     padding: 6px 12px;
