@@ -7,7 +7,8 @@ router.get('/api/dogs',(req, res)=>) {
         const sql = 'SELECT d.name AS dog_name, d.size, u.username AS owner_username From Dogs d JOIN User ON d.owner_id = u.user_id';
         db.query = (sql,(err,results)) => {
             if (err) {
-                console.error('')
+                console.error('error:',err);
+                
             }
         }
     }
