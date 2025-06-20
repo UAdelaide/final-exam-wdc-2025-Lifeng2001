@@ -166,5 +166,8 @@ section {
     align-items: center;
     justify-content: center;
 }
+.bg-light {
+    width:30%;
+}
 
 
