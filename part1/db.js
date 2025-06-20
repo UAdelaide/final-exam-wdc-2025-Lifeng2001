@@ -26,7 +26,7 @@ let db;
     database: 'DogWalkService',
     multipleStatements:true
     });
-    const 
+    const schemaSql = require()
 
     // Create a table if it doesn't exist
     await db.execute(`
