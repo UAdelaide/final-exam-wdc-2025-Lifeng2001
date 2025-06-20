@@ -21,7 +21,9 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 (async()=> {
-    
+    try {
+        await initDatabase();
+    }
 })
 
 app.use('/', indexRouter);
