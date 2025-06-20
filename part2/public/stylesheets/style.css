@@ -161,6 +161,6 @@ section {
 .bg-warning-subtle {
     background-color: white;
 }
-.bg-warning-subtle(:placeholder-shown) {
-    backgrou
+.custom-input:not(:placeholder-shown) {
+    background-color: #fff3cd; /* Bootstrap's warning-subtle yellow */
 }
