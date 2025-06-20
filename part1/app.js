@@ -23,5 +23,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/',dogsRouter);
 app.use('/',walkrequestsRouter);
+app.use('/',walkersRouter);
 
 module.exports = app;
