@@ -1,0 +1,46 @@
+/* Reset 基础 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    padding: 2rem;
+    text-align: center;
+  }
+
+  #app {
+    width: 60vw;        /* 视口宽度60% */
+    max-width: 600px;   /* 最大宽度 */
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* 内部元素水平居中 */
+    gap: 1.5rem;          /* 子元素之间间距 */
+  }
+
+  form {
+    width: 100%;          /* 让表单占满父容器宽度 */
+  }
+
+  form .mb-3 {
+    margin-bottom: 1rem;
+  }
+
+  input.form-control {
+    width: 100%;          /* 输入框撑满宽度 */
+  }
+
+  button.w-100 {
+    width: 100%;          /* 按钮撑满宽度 */
+  }
