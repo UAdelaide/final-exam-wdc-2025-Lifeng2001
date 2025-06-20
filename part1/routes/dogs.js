@@ -3,5 +3,5 @@ const router = express.Router();
 const db = require('../db');
 
 router.get('',(req, res)=>) {
-    const sql ='SELECT'
+    const sql ='SELECT *'
 }
