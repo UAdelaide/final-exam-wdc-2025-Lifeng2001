@@ -8,8 +8,10 @@ app.use(session({
     secret: '1234',
     resave:false,
     saveUninitialized: false,
-    cookie
-}))
+    cookie: {
+        maxAge: 1000*60*60*24
+    }
+}));
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
