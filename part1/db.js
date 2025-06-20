@@ -11,7 +11,7 @@ const pool = mysql.createPool({
 
 let db;
 
-(async functio() => {
+(async function initDatabase() => {
   try {
     // Connect to MySQL without specifying a database
     const connection = await mysql.createConnection({
