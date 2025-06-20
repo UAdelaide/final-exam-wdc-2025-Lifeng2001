@@ -12,9 +12,13 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 
-            alert("login success");
-            alert("Welcome "+this.responseText);
-            window.location.href = '/owner-dashboard.html';
+            alert("Welcome "+this.response.user.username);
+            if(this.response.user.role ==='owner') {
+                window.location.href = '/owner-dashboard.html';
+            } else if (this.response.user.role ==='walker'){
+                window.location.href = '/walker-dashboard.html';
+
+            }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
