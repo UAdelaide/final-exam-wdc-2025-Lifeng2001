@@ -175,6 +175,7 @@ function downvote(index) {
 
 
 function login(){
+    event.preventDefault();
 
     let user = {
         username: document.getElementById('username').value,
@@ -187,7 +188,7 @@ function login(){
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            
+
             alert("login success");
             alert("Welcome "+this.responseText);
             window.location.href = '/owner-dashboard.html';
