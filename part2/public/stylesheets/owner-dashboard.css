@@ -2,7 +2,7 @@
 #titleAndlogout {
     width:696px;
     display:flex;
-    jus
+    justify-content: space-between;
 }
 #logoutBtn {
     position: right;
