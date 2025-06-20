@@ -131,4 +131,4 @@ function getDb() {
 module.exports = {
     initDB,
     getDb,
-}
+};
