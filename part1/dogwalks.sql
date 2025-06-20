@@ -17,10 +17,6 @@ VALUES
     ('joes123','joes@example.com', 'hashed111','walker'),
     ('momo123','momo@example.com', 'hashed222','owner');
 
-
-
-
-
 CREATE TABLE Dogs (
     dog_id INT AUTO_INCREMENT PRIMARY KEY,
     owner_id INT NOT NULL,
