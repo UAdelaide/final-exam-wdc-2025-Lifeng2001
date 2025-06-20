@@ -14,7 +14,8 @@ router.get('/api/dogs', async(req, res) => {
         SELECT w.request_id,
         d.name AS dog_name,
         w.requested_time,
-        
+        w.duration_minutes,
+        w.location
     `;
 
     try {
