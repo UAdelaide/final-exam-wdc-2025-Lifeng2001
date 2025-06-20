@@ -158,3 +158,4 @@ section {
     width: 30%;
     margin: 0 auto;
 }
+input:not(:placeholder-shown)
