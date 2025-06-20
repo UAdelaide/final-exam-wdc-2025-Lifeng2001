@@ -29,7 +29,6 @@ app.use('/',walkersRouter);
 const database = require('./db');
 
 (async()=> {
-    aw
     try {
         INSERT INTO Users (username, email, password_hash, role)
 VALUES
