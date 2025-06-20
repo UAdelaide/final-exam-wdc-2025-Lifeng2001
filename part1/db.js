@@ -10,8 +10,6 @@ async function initDB() {
               password: '' // Set your MySQL root password
             });
             await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
-            await db.query('USE DogWalkService');
-            ;
             await db.end();
             db = await mysql.createConnection({
                   host: 'localhost',
