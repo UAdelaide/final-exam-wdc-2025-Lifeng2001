@@ -117,14 +117,17 @@ VALUES
 
 
           await db.execute(`
-            INSERT INTO Users (username, email, password_hash, role)
+            INSERT INTO Dogs (owner_id, name, size)
 VALUES
-    ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-    ('bobwalker','bob@example.com', 'hashed456', 'walker'),
-    ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-    ('joes123','joes@example.com', 'hashed111','walker'),
-    ('momo123','momo@example.com', 'hashed222','owner');
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
+((SELECT user_id FROM Users WHERE username ='carol123'), 'Bella', 'small'),
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Bingo', 'large'),
+((SELECT user_id FROM Users WHERE username ='carol123'), 'Tmood', 'small'),
+((SELECT user_id FROM Users WHERE username ='momo123'), 'Stake', 'medium');;
           `);
+
+
+          
 
 
 
