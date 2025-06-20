@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
     } catch (err) {
         cconsole.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
-})()
+})();
 
 
 
