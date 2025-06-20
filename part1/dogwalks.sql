@@ -29,7 +29,9 @@ CREATE TABLE Dogs (
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
 
-INSERT INTO Dogs (owner_id,)
+INSERT INTO Dogs (owner_id, name, size)
+VALUES
+()
 
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
