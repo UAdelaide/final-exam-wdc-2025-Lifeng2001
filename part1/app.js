@@ -23,13 +23,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 (async()=> {
     try {
         await initDatabase();
+        app.use('/', indexRouter);
+        app.use('/users', usersRouter);
+        app.use('/',dogsRouter);
+app.use('/',walkrequestsRouter);
+app.use('/',walkersRouter);
     }
 })
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/',dogsRouter);
-app.use('/',walkrequestsRouter);
-app.use('/',walkersRouter);
+
 
 module.exports = app;
