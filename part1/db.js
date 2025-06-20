@@ -1,11 +1,6 @@
 const mysql = require('mysql/promise');
 
-const db = mysql.createPool({
-    // host: 'localhost',
+let db;
 
-    // user: 'root',
-    // password: ''
-    database: 'DogWalkService'
-});
 
 module.exports = db;
