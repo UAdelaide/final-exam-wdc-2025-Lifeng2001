@@ -189,7 +189,6 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 
-            alert("login success");
             alert("Welcome "+this.responseText);
             window.location.href = '/owner-dashboard.html';
         } else if (this.readyState == 4 && this.status >= 400) {
