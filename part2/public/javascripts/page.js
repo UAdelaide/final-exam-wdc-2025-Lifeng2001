@@ -188,7 +188,7 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             alert("Welcome "+this.responseText);
-            window.lo
+            window.location.href = '/owner-dashbo'
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
