@@ -216,7 +216,7 @@ function logout(){
     if (this.readyState ===4 ) {
         if (this.status ===200) {
             alert('logged out successfully');
-            window.lo
+            window.location.href = '/login.html';
         }
     }
     // Open connection to server & send the post data using a POST request
