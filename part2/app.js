@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 app.use(session({
     secret: '1234',
-    resave:false,
+    resave: false,
     saveUninitialized: false,
     cookie: {
         maxAge: 1000*60*60*24
