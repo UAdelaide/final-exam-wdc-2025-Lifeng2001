@@ -21,7 +21,8 @@ router.get('/api/walker/summary', async(req, res) => {
     const sql = `
         SELECT w.walker_username AS walker_username,
         COUNT(r.rating AS total_ratings,
-        AVG(r.rating) AS average_rating
+        AVG(r.rating) AS average_rating,
+        COUNT ()
     `;
 
     try {
