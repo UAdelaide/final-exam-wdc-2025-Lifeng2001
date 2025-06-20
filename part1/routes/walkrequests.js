@@ -17,7 +17,7 @@ router.get('/api/dogs', async(req, res) => {
         w.duration_minutes,
         w.location,
         u.username AS owner_username
-        F
+        From WalkRequest
     `;
 
     try {
