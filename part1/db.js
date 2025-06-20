@@ -52,7 +52,14 @@ async function initDB() {
             )
 
         ');
-        
+        await db.execute('
+
+
+
+
+
+
+        ')
 
 
 
@@ -61,16 +68,16 @@ async function initDB() {
 
 
 
-// CREATE TABLE WalkApplications (
-//     application_id INT AUTO_INCREMENT PRIMARY KEY,
-//     request_id INT NOT NULL,
-//     walker_id INT NOT NULL,
-//     applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-//     status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
-//     FOREIGN KEY (request_id) REFERENCES WalkRequests(request_id),
-//     FOREIGN KEY (walker_id) REFERENCES Users(user_id),
-//     CONSTRAINT unique_application UNIQUE (request_id, walker_id)
-// );
+CREATE TABLE WalkApplications (
+    application_id INT AUTO_INCREMENT PRIMARY KEY,
+    request_id INT NOT NULL,
+    walker_id INT NOT NULL,
+    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
+    FOREIGN KEY (request_id) REFERENCES WalkRequests(request_id),
+    FOREIGN KEY (walker_id) REFERENCES Users(user_id),
+    CONSTRAINT unique_application UNIQUE (request_id, walker_id)
+);
 
 // CREATE TABLE WalkRatings (
 //     rating_id INT AUTO_INCREMENT PRIMARY KEY,
