@@ -1,7 +1,8 @@
 
 #titleAndlogout {
-    width:696px
-    display
+    width:696px;
+    display:flex;
+    jus
 }
 #logoutBtn {
     position: right;
