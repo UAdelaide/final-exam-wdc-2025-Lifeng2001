@@ -8,7 +8,7 @@
 // // Middleware
 // app.use(express.json());
 // app.use(session({
-//     secret: 'your-secret-key',
+//     secret: '123',
 //     resave: false,
 //     saveUninitialized: true,
 //     cookie: { maxAge: 24 * 60 * 60 * 1000,
