@@ -36,7 +36,7 @@ const database = require('./db');
               user: 'root',
               password: '' // Set your MySQL root password
             });
-            await connection.query('CREATE DATABASE IF NOT EXISTS ');
+            await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
             await connection.end();
 
 
