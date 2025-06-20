@@ -118,6 +118,9 @@ VALUES
     }
 }
 
+function getDb() {
+    return db;
+}
 
 
 
