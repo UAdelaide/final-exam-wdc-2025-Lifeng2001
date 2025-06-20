@@ -2,7 +2,7 @@ const mysql = require('mysql2/promise');
 
 let db;
 
-(async function initDatabase() => {
+async function initDatabase() => {
   try {
     // Connect to MySQL without specifying a database
     const connection = await mysql.createConnection({
