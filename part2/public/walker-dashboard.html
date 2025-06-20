@@ -64,7 +64,7 @@
         async function applyToWalk(requestId) {
           try {
             // use getCurrentUser()
-            const userId = await getCurrentUser();
+            
             console.log('',userId);
             if(!userId) throw new error("User not logged in")
 
