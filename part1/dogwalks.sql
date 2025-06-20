@@ -9,7 +9,7 @@ CREATE TABLE Users (
     role ENUM('owner', 'walker') NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-INSERT INTO Users (username, emial, password_hash, role)
+INSERT INTO Users (username, email, password_hash, role)
 VALUES (
     ('alice123', 'alice@example.com', 'hashed123', 'owner'),
     ('bobwalker','bob@example.com', 'hashed456', 'walker'),
@@ -29,7 +29,7 @@ CREATE TABLE Dogs (
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
 
-
+INSERT INTO Dogs (username, emial, password_hash, role)
 
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
