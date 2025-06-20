@@ -13,6 +13,8 @@ router.get('/api/dogs', async(req, res) => {
     const sql = `
         SELECT w.request_id,
         d.name AS dog_name,
+        w.requested_time,
+        
     `;
 
     try {
