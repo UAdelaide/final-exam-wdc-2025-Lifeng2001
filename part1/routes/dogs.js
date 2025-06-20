@@ -8,7 +8,7 @@ router.get('/api/dogs',(req, res)=>) {
         db.query = (sql,(err,results)) => {
             if (err) {
                 console.error('error:',err);
-                return res.status(500).json({})
+                return res.status(500).json({error: 'Failed '})
             }
         }
     }
