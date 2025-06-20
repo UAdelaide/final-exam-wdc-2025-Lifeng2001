@@ -2,12 +2,6 @@ const mysql = require('mysql/promise');
 
 let db;
 async function initDB() {
-
-
-
-    
-
-}() => {
     try {
         // Connect to MySQL without specifying a database
             const db = await mysql.createConnection({
@@ -124,5 +118,12 @@ VALUES
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
 })();
+
+
+
+
+
+
+
 
 module.exports = db;
