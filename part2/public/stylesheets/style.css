@@ -167,3 +167,6 @@ section {
 .login-btn {
     align-self: flex-start;
 }
+table {
+    width:100%
+}
