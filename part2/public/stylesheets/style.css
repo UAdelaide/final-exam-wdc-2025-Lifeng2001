@@ -154,3 +154,6 @@ textarea {
 section {
     display: none;
 }
+#app{
+    width: 50%;
+}
