@@ -5,8 +5,9 @@ router.get('/', async (req, res) => {
 
     const ownerId = req.session.user_id;
     if(!ownerId) {
-        return res.status(401).json({error:})
+        return res.status(401).json({error: 'Not logged in'});
     }
+    
     try {
       const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
       res.json(rows);
