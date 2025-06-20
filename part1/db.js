@@ -28,7 +28,9 @@ let db;
     });
     const schemaSql = require('fs').readFileSync('./dogwalks.sql');
     console.log('Database initialized successfully');
-} caches
+} caches (err) {
+    console.error('D')
+}
 
     // Create a table if it doesn't exist
     await db.execute(`
