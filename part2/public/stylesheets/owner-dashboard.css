@@ -5,6 +5,7 @@
     justify-content: space-between;
 }
 #logoutBtn {
+    
     font-size: small;
     height: 30%;
     border: 1px solid red;
