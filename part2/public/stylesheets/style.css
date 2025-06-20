@@ -161,3 +161,6 @@ section {
 .bg-warning-subtle {
     background-color: white;
 }
+.bg-warning-subtle(:placeholder-shown) {
+    backgrou
+}
