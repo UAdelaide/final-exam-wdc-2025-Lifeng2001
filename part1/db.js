@@ -3,8 +3,8 @@ const pool = mysql.createPool({
     // host: 'localhost',
 
     // user: 'root',
-    // password: '
-    database: ''
+    // password: ''
+    database: 'DogWalkService'
 });
 
 module.exports = pool;
