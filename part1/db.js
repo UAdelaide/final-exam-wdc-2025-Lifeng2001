@@ -1,5 +1,6 @@
 const mysql = require('mysql/promise');
-const pool = mysql.createPool({
+
+const db = mysql.createPool({
     // host: 'localhost',
 
     // user: 'root',
@@ -7,4 +8,4 @@ const pool = mysql.createPool({
     database: 'DogWalkService'
 });
 
-module.exports = pool;
+module.exports = db;
