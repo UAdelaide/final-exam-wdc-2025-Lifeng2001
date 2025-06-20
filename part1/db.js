@@ -4,12 +4,12 @@ let db;
 async function initDB() {
     try {
         // Connect to MySQL without specifying a database
-            const db = await mysql.createConnection({
+            const connection = await mysql.createConnection({
               host: 'localhost',
               user: 'root',
               password: '' // Set your MySQL root password
             });
-            await db.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
+            await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
             await db.query('USE DogWalkService');
             ;
             await db.end();
