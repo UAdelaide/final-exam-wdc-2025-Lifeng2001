@@ -60,7 +60,10 @@
         async function loadalldogs() {
           try {
             const res = await fetch ('/api/dogs');
-            if(!res.ok) thorw new Error('Failed to fech dogs');
+            if(!res.ok) throw new Error('Failed to fech dogs');
+            const dogData = await res.json();
+
+            for()
           }
 
         }
