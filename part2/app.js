@@ -12,6 +12,7 @@ app.use(session({
     secret:'123',
     resave: false,
     saveUninitialized: false
+    maxAge: 1000 * 60 * 60 * 24
 }));
 
 
