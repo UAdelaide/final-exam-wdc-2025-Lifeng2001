@@ -35,4 +35,4 @@ let db;
 
 
 
-module.exports = ;
+module.exports = {initDatabase,db:()=>db};
