@@ -4,10 +4,11 @@ const db = require('../models/db');
 router.get('/my-dogs', async (req, res) => {
     console.log('Session in /my-dogs:', req.session);
 
-     const ownerId = req.session.user.id;
-     if(!ownerId) {
-         return res.status(401).json({error: 'Not logged in'});
-     }
+     if (!req.session.user || !req.session.user.id) {
+        return res.status(401).json({ error: 'Not logged in' });
+      }
+
+      const ownerId = req.session.user.id;
 
     try {
       const [rows] = await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?',[ownerId]);
