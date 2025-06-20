@@ -26,7 +26,7 @@ let db;
     database: 'DogWalkService',
     multipleStatements:true
     });
-    const schemaSql = require('fs').readFileSync()
+    const schemaSql = require('fs').readFileSync(./dogwalks.sql)
 
     // Create a table if it doesn't exist
     await db.execute(`
