@@ -20,7 +20,7 @@ router.get('/my-dogs', async (req, res) => {
   });
   router.get('/', async (req, res) => {
     try {
-      const [rows] = await db.query('SELECT dog_id, name, size, owner_ FROM Dogs WHERE owner_id = ?',[ownerId]);
+      const [rows] = await db.query('SELECT ',[ownerId]);
       res.json(rows);
     } catch (error) {
       res.status(500).json({ error: 'Failed to fetch dogs' });
