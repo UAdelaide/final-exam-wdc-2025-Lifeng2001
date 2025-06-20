@@ -5,13 +5,11 @@ require('dotenv').config();
 
 const app = express();
 app.use(session({
-    secret: '1234',
+    secret: 'your-secret-key', //
     resave: false,
     saveUninitialized: false,
-    cookie: {
-        maxAge: 1000*60*60*24
-    }
-}));
+    cookie: { maxAge: 24 * 60 * 60 * 1000 } // 1day
+  }));
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
