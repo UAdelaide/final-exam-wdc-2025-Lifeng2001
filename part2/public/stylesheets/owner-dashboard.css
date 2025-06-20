@@ -5,6 +5,8 @@
     justify-content: space-between;
 }
 #logoutBtn {
-    bor
+    border: 1px solid red;
+    border-radius: 8px;
+    
     position: right;
 }
