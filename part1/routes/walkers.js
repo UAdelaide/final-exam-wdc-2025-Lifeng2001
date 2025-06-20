@@ -23,6 +23,7 @@ router.get('/api/walker/summary', async(req, res) => {
         COUNT(r.rating AS total_ratings,
         AVG(r.rating) AS average_rating,
         COUNT (CASE WHEN w.status = 'completed' THEN 1 END) AS completed_walks
+        FROM Walkers
     `;
 
     try {
