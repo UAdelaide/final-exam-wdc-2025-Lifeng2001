@@ -24,8 +24,6 @@ header {
     align-items: center;
     justify-content: center;
     min-width: 60vh;
-
-
 }
 header button {
     float: right;
