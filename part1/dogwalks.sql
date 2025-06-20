@@ -31,7 +31,7 @@ CREATE TABLE Dogs (
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-((SELECT user_id FROM Users WHERE user))
+((SELECT user_id FROM Users WHERE username =''))
 
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
