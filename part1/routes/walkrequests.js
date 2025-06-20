@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-router.get('/api/', async(req, res) => {
+router.get('/api/walkrequests/open', async(req, res) => {
 
     // "request_id": 1,
     // "dog_name": "Max",
