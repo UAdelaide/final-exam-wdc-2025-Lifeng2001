@@ -16,7 +16,7 @@ VALUES
     ('carol123', 'carol@example.com', 'hashed789', 'owner'),
     ('joes123','joes@example.com', 'hashed111','walker'),
     ('momo123','momo@example.com', 'hashed222','owner');
-;
+
 
 
 
@@ -29,13 +29,13 @@ CREATE TABLE Dogs (
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
 
--- INSERT INTO Dogs (owner_id, name, size)
--- VALUES
--- ((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
--- ((SELECT user_id FROM Users WHERE username ='carol123'), 'Bella', 'small'),
--- ((SELECT user_id FROM Users WHERE username ='alice123'), 'Bingo', 'large'),
--- ((SELECT user_id FROM Users WHERE username ='carol123'), 'Tmood', 'small'),
--- ((SELECT user_id FROM Users WHERE username ='momo123'), 'Stake', 'medium').
+INSERT INTO Dogs (owner_id, name, size)
+VALUES
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Max', 'medium'),
+((SELECT user_id FROM Users WHERE username ='carol123'), 'Bella', 'small'),
+((SELECT user_id FROM Users WHERE username ='alice123'), 'Bingo', 'large'),
+((SELECT user_id FROM Users WHERE username ='carol123'), 'Tmood', 'small'),
+((SELECT user_id FROM Users WHERE username ='momo123'), 'Stake', 'medium');
 
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
