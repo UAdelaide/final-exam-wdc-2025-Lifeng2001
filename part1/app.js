@@ -30,11 +30,17 @@ const database = require('./db');
 
 (async()=> {
     try {
+        // Connect to MySQL without specifying a database
+            const connection = await mysql.createConnection({
+              host: 'localhost',
+              user: 'root',
+              password: '' // Set your MySQL root password
+            });
 
 
 
 
-        
+
         INSERT INTO Users (username, email, password_hash, role)
 VALUES
     ('alice123', 'alice@example.com', 'hashed123', 'owner'),
