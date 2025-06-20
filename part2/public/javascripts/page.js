@@ -209,7 +209,33 @@ function downvote(index) {
 //     xmlhttp.send(JSON.stringify(user));
 
 // }
+async function login() {
+    try{
+      const response = await axios.post('/api/users/login',{
+        username: username.value,
+        password: password.value
+      });
 
+      const role = response.data.user.role;
+      if (role === 'owner'){
+        window.location.href = 'owner-dashboard.html';
+      }
+      else if (role === 'walker'){
+        window.location.href = 'walker-dashboard.html';
+      }
+      else {
+        error.value = 'unknow role'
+      }
+    }
+    catch (err) {
+      if (err.response && err.response.data && err.response.data.error){
+        error.value = err.response.data.error;
+      }
+      else {
+        error.value = 'login failed'
+      }
+    }
+  }
 function logout(){
 
     // Create AJAX Request
