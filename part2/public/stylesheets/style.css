@@ -159,8 +159,8 @@ section {
     margin: 0 auto;
 }
 .bg-warning-subtle {
-    background-color: white;
+    background-color: white!important;
 }
 .bg-warning-subtle:not(:placeholder-shown) {
-    background-color: #fff3cd;
+    background-color: teal!important;
 }
