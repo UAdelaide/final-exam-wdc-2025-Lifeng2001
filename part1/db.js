@@ -1,5 +1,5 @@
 const mysql = require('mysql2/promise');
-const fs = require
+const fs = require('fs');
 let db;
 
 async function initDatabase() {
