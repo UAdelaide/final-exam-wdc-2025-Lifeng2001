@@ -86,22 +86,6 @@ async function initDB() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         await db.execute(`
             INSERT INTO Users (username, email, password_hash, role)
 VALUES
