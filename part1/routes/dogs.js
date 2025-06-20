@@ -10,7 +10,7 @@ router.get('/api/dogs',(req, res)=>) {
                 console.error('error:',err);
                 return res.status(500).json({error: 'Failed to fetch dogs'});
             }
-            res
+            res.json(results);
         }
     }
 }
