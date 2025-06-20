@@ -28,6 +28,7 @@ async function initDatabase() {
     });
     const schemaSql = fs.readFileSync('./dogwalks.sql','utf8');
     await db.query(schemaSql);
+    await connection.query('USE DogWalkService')
     console.log('Database initialized successfully');
 } catch (err) {
     console.error('Database initialization failed:', err);
