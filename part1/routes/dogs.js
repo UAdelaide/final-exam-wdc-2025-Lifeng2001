@@ -12,8 +12,9 @@ router.get('/', async(req, res) => {
     try {
         const [results] = await db.query (sql);
         res.json(results);
+    } catch (error) {
+        console.error
     }
-    
 });
 
 module.exports = router;
