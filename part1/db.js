@@ -129,12 +129,6 @@ function getDb() {
     return db;
 }
 
-
-
-
-
-
-
 module.exports = {
     initDB,
     getDb,
