@@ -28,7 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
         app.use('/',dogsRouter);
         app.use('/',walkrequestsRouter);
         app.use('/',walkersRouter);
-    } catch (err)
+    } catch (err) {
+        console.
+    }
 })
 
 
