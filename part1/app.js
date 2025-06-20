@@ -29,9 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
         app.use('/',walkrequestsRouter);
         app.use('/',walkersRouter);
     } catch (err) {
-        console.
+        cconsole.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
-})
+})()
 
 
 
