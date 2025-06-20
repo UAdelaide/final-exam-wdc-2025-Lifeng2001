@@ -19,7 +19,7 @@ router.get('/api/walkers/summary', async(req, res) => {
     //   ]
 
     const sql = `
-        SELECT w.walker_username AS walker_username,
+        SELECT w.username AS walker_username,
         COUNT(r.rating) AS total_ratings,
         AVG(r.rating) AS average_rating,
         COUNT(CASE WHEN wk.status = 'completed' THEN 1 END) AS completed_walks
