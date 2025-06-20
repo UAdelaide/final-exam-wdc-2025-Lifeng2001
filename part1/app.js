@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const {initDatabase, db} = require('./db')
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 (async()=> {
     try {
-        await initDatabase();
+        
         app.use('/', indexRouter);
         app.use('/users', usersRouter);
         app.use('/',dogsRouter);
