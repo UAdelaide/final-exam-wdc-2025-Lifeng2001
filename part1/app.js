@@ -23,11 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 (async()=> {
     try {
 
-        app.use('/', indexRouter);
-        app.use('/users', usersRouter);
-        app.use('/',dogsRouter);
-        app.use('/',walkrequestsRouter);
-        app.use('/',walkersRouter);
+       
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
