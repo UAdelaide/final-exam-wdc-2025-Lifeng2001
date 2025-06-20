@@ -176,7 +176,6 @@ function downvote(index) {
 
 function login(){
 
-
     let user = {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value
@@ -189,14 +188,14 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 
-            alert("Welcome "+this.response.user.username);
-            if(this.response.user.role ==='owner') {
+            const response = JSON.parse(this.responseText);
+            alert("Welcome "+response.user.username);
+            if(response.user.role ==='owner') {
                 window.location.href = '/owner-dashboard.html';
-            } else if (this.response.user.role ==='walker'){
+            } else if (response.user.role ==='walker'){
                 window.location.href = '/walker-dashboard.html';
 
             }
-
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
