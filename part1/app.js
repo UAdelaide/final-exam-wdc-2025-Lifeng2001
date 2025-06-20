@@ -20,10 +20,18 @@ app.use(cookieParser());
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/',dogsRouter);
+app.use('/',walkrequestsRouter);
+app.use('/',walkersRouter);
+
+const database = re
+
 (async()=> {
     try {
 
-       
+
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
