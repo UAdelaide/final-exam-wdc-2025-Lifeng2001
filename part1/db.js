@@ -10,7 +10,7 @@ async function initDatabase() {
 
     // user: 'root',
     // password: ''
-    database: 'DogWalkService'
+    // database: 'DogWalkService'
     });
 
     // Create the database if it doesn't exist
