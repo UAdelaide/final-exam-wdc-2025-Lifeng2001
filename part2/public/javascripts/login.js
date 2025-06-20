@@ -15,7 +15,7 @@ function login(){
             alert("Welcome "+response.user.username);
             if(response.user.role ==='owner') {
                 window.location.href = '/owner-dashboard.html';
-            } else if (this.response.user.role ==='walker'){
+            } else if (response.user.role ==='walker'){
                 window.location.href = '/walker-dashboard.html';
 
             }
