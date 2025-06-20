@@ -11,7 +11,8 @@ router.get('/api/dogs', async(req, res) => {
     // "location": "Parklands",
     // "owner_username": "alice123"
     const sql = `
-        SELECT w.request
+        SELECT w.request_id,
+        
     `;
 
     try {
