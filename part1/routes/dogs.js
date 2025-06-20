@@ -5,6 +5,6 @@ const db = require('../db');
 router.get('/api/dogs',(req, res)=>) {
     try {
         const sql = 'SELECT d.name AS dog_name, d.size, u.username AS owner_username From Dogs d
-        JOIN User'
+        JOIN User ON d.owner'
     }
 }
