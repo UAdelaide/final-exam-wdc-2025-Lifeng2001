@@ -7,6 +7,8 @@ const pool = mysql.createPool({
     // password: ''
     database: 'DogWalkService'
 });
+
+
 let db;
 
 (async () => {
