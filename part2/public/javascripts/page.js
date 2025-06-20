@@ -214,7 +214,9 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
     if (this.readyState ===4 ) {
-        if (this.status ===200)
+        if (this.status ===200) {
+            alert('log')
+        }
     }
     // Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/api/users/logout", true);
