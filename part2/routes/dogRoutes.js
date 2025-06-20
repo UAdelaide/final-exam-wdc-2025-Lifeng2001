@@ -3,7 +3,10 @@ const router = express.Router();
 const db = require('../models/db');
 router.get('/', async (req, res) => {
 
-    const ownerId = req.session.use
+    const ownerId = req.session.user_id;
+    if(!ownerId) {
+        return re
+    }
     try {
       const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
       res.json(rows);
