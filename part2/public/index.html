@@ -69,10 +69,11 @@
                 const photoData = await photoRes.json();
                 dog.photo = photoData.message;
               } catch {
-                dog.photo = ''
+                dog.photo = '/images/logo.png';
               }
             }
           }
+          
 
         }
       }
