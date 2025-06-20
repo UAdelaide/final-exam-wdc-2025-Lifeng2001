@@ -27,8 +27,8 @@ router.get('/api/dogs', async(req, res) => {
         const [results] = await db.query (sql);
         res.json(results);
     } catch (error) {
-        console.error('Error fetching open:', error);
-        res.status(500).json({ error: 'Failed to fetch dogs'});
+        console.error('Error fetching open walk requests:', error);
+        res.status(500).json({ error: 'Failed to fetch walk requests'});
     }
 });
 
