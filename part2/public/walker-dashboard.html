@@ -59,7 +59,7 @@
           try {
             // use getCurrentUser()
             const userId = await getCurrentUser();
-            if()
+            if(!userId) throw new error("User not logined")
 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
