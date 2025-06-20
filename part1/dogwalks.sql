@@ -35,7 +35,7 @@ VALUES
 ((SELECT user_id FROM Users WHERE username ='carol123'), 'Bella', 'small'),
 ((SELECT user_id FROM Users WHERE username ='alice123'), 'Bingo', 'large'),
 ((SELECT user_id FROM Users WHERE username ='carol123'), 'Tmood', 'small'),
-((SELECT user_id FROM Users WHERE username ='momo123'), '', 'medium'),
+((SELECT user_id FROM Users WHERE username ='momo123'), 'Stake', 'medium').
 
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
