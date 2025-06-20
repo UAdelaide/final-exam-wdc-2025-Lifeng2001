@@ -3,6 +3,13 @@ const router = express.Router();
 const db = require('../db');
 
 router.get('/api/dogs', async(req, res) => {
+
+    // "request_id": 1,
+    // "dog_name": "Max",
+    // "requested_time": "2025-06-10T08:00:00.000Z",
+    // "duration_minutes": 30,
+    // "location": "Parklands",
+    // "owner_username": "alice123"
     const sql = `
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
         FROM Dogs d
