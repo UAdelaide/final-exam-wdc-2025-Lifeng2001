@@ -4,6 +4,6 @@ const db = require('../db');
 
 router.get('/api/dogs',(req, res)=>) {
     try {
-        
+        const sql
     }
 }
