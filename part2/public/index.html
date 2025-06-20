@@ -73,7 +73,9 @@
               }
             }
             dogs.value = dogData;
-          } catch
+          } catch(err) {
+            error.value = err.message;
+          }
 
 
         }
