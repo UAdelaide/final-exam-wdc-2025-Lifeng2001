@@ -52,7 +52,9 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name = 'Max'),'2025-06-10 08:00:00',30,'Parklands', 'open'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Bella'),'2025-06-10 09:30:00',45,'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Bingo'),'2025-06-10 010:30:00',60,'North Terrace', 'open'),
-((SELECT dog_id FROM Dogs WHERE name = 'Tmood'),'2025-06-10 012:00:00',30,'To', 'open'),
+((SELECT dog_id FROM Dogs WHERE name = 'Tmood'),'2025-06-10 012:00:00',30,'Torrens Ave', 'open'),
+((SELECT dog_id FROM Dogs WHERE name = 'Tmood'),'2025-06-10 012:00:00',30,'Torrens Ave', 'open'),
+
 
 
 CREATE TABLE WalkApplications (
