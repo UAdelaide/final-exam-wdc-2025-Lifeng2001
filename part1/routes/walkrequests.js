@@ -18,7 +18,8 @@ router.get('/api/dogs', async(req, res) => {
         w.location,
         u.username AS owner_username
         From WalkRequests w
-        JOIN Dogs d ON w.
+        JOIN Dogs d ON w.dog_id = d.dog_id
+        JOIN User
     `;
 
     try {
