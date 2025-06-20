@@ -128,4 +128,7 @@ function getDb() {
 
 
 
-module.exports = db;
+module.exports = {
+    initDB,
+    getDb,
+}
