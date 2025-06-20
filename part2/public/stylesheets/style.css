@@ -164,7 +164,6 @@ section {
 .bg-warning-subtle:not(:placeholder-shown) {
     background-color: rgb(246, 246, 98)!important;
 }
-.btn-primary {
-    position: left;
-
+.login-btn {
+    align-self: flex-start;
 }
