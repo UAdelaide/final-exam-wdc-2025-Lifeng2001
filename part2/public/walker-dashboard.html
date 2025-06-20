@@ -90,7 +90,7 @@
             if (!res.ok) throw new Error(result.error || 'fetch current user failed');
             message.value = result.message;
             error.value = '';
-            return user.id;
+            return result.user.id;
           } catch (err) {
             error.value = err.message;
             message.value = '';
