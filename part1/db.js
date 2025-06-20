@@ -31,11 +31,11 @@ async function initDB() {
         ');
             await db.execute('
                 CREATE TABLE Dogs (
-    dog_id INT AUTO_INCREMENT PRIMARY KEY,
-    owner_id INT NOT NULL,
-    name VARCHAR(50) NOT NULL,
-    size ENUM('small', 'medium', 'large') NOT NULL,
-    FOREIGN KEY (owner_id) REFERENCES Users(user_id)
+                dog_id INT AUTO_INCREMENT PRIMARY KEY,
+                owner_id INT NOT NULL,
+                name VARCHAR(50) NOT NULL,
+                size ENUM('small', 'medium', 'large') NOT NULL,
+                FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
 
 
