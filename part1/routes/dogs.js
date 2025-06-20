@@ -13,7 +13,7 @@ router.get('/', async(req, res) => {
         const [results] = await db.query (sql);
         res.json(results);
     } catch (error) {
-        console.error
+        console.error('Error fetching dogs:')
     }
 });
 
