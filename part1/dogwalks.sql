@@ -10,6 +10,9 @@ CREATE TABLE Users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 INSERT INTO Users (username, emial, password_hash, role)
+VALUES (
+    
+)
 
 
 
