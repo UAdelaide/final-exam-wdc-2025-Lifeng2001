@@ -17,6 +17,7 @@ async function initDB() {
                   password: '',
                   database: 'DogWalkService'
                 });
+            db.
 
             await db.execute(`
                 CREATE TABLE Users (
