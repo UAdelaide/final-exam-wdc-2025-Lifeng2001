@@ -19,10 +19,10 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const dogRoutes = require('./routes/gogRoutes');
+const dogRoutes = require('./routes/dogRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-app.user('/api/walks', walkRoutes);
+app.user('/api/dog', walkRoutes);
 
 // Export the app instead of listening here
 module.exports = app;
